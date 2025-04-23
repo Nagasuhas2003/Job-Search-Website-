@@ -7,9 +7,10 @@
     {% if 'salary' in job %}
     <div><b>Salary :</b> {{job['salary']}}</div>
     {%endif %}
-  </div>
+  </div >
 
-  <div style="margin-top: 20px" class="col-3">
-    <button type="button" class="btn btn-outline-primary">Apply</button>
+  <div  class="col-3" style="margin-top: 20px;">
+    <!-- ancher tag is used for links href is where we mention link and mail to is where mail id and body and also we can use mailtolink genratoe and paste url there -->
+    <a href="mailto:mailto:snagasuhas@gmail.com?subject=Application%20{{job['title']}}Link&body=My%20name%3A%3Cyour%20name%20here%3E%0D%0AMy%20Resume%20Link%3A%3Cresume%20link%3E type="button" class="btn btn-outline-primary float-right align-middle">Apply</a>
   </div>
 </div>
