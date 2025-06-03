@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <style>
+      .center{
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+         }
+         </style>
+<body>
+    
+    
+    <div text-align="center" class="container"> 
+      <img src="{{ url_for('static', filename='Banner.jpg') }}" style="width:100%;" id="frontpage" />
+      <div class="center" ><h1>Welcome to Naga Careers</h1></div>
+      <h2>Login </h2>
+      <form action="/login" method="post">
+        <div>
+          <label for="username">Username</label><br />
+          <input type="text" id="username" name="username" required /><br />
+        </div>
+        <div>
+          <label for="password">Password</label><br />
+          <input type="password" id="password" name="password" required /><br />
+        </div>
+        <input type="submit" onclick="" value="Login" />
+        <a hef="/signup"> Signup</a>
+        
+    </div>
+  </div>
+  </body>
+</html>
+</form>
+      <h2>Signup</h2> 
+      <form action="/signup" method="post">
+        <div>
+          <label for="username">Username</label><br />
+          <input type="text" id="username" name="username" required /><br />
+        </div>
+        <div>
+          <label for="password">Password</label><br />
+          <input type="password" id="password" name="password" required /><br />
+        </div>
+        <input type="submit" value="Signup" />
+      </form>

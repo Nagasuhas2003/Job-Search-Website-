@@ -5,28 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Naga Careers</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-    <style>
-      #banner {
-        height: 360px;
-        width: 100%;
-        object-fit: cover; /* fits the image to webpage neatly 1005 width and height auto */
-        margin-bottom: 16px;
-      }
-    </style>
+   {%include 'bootstrap.html' %}
+  
   </head>
   <body>
+    <!-- Its best practice create seperate which are repeating -->
     {% include 'nav.html' %}
-
-    <img class="img-fluid" src="static\Banner.jpg" id="banner" />
-    <div class="container">
-      <h1 class="text-center mt-2 mb-4">Welcome to Naga Careers</h1>
-      <p>Explore our job openings and find your dream job!</p>
+  <div class="container">
+    {% include 'banner.html' %}
+    <h1 class="text-center mt-2 mb-4">Welcome to Naga Careers</h1>
+      <p class="text-center mt-2 mb-4">Explore our job openings and find your dream job!</p>
 
       <h2 class="text-center">About Us</h2>
       <!-- column spacing --create row and then columns-->

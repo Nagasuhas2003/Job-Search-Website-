@@ -1,0 +1,164 @@
+<!-- <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  <style>
+      .center{
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+         }
+         </style>
+<body>
+    
+    
+    <div text-align="center" class="container"> 
+      <img src="{{ url_for('static', filename='Banner.jpg') }}" style="width:100%;" id="frontpage" />
+      <div class="center" ><h1>Welcome to Naga Careers</h1></div>
+      <h2>Login </h2>
+      <form action="/login" method="post">
+        <div>
+          <label for="username">Username</label><br />
+          <input type="text" id="username" name="username" required /><br />
+        </div>
+        <div>
+          <label for="password">Password</label><br />
+          <input type="password" id="password" name="password" required /><br />
+        </div>
+        <input type="submit" onclick="" value="Login" />
+        <a href="/signup" >
+
+        <type=<button> SignUp</button>
+        </a>
+        
+    </div>
+  </div>
+  </body>
+<!-- </html> My version of the login.html template -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        position: relative;
+        text-align: center;
+      }
+
+      .background-img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+
+      .overlay-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.95); /* Less transparent */
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .form-buttons {
+        margin-top: 20px;
+      }
+
+      .form-buttons input[type="submit"] {
+        background-color: #007bff; /* Blue for login */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .form-buttons button {
+        background-color: #28a745; /* Green for sign up */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .form-buttons input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+
+      .form-buttons button:hover {
+        background-color: #218838;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        padding: 8px;
+        margin: 8px 0;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="{{ url_for('static', filename='Banner.jpg') }}"
+        class="background-img"
+        id="frontpage"
+      />
+
+      <div class="overlay-content">
+        <h1>Welcome to Naga Careers</h1>
+        <h2>Login</h2>
+        <form action="/login" method="post">
+          <div>
+            <label for="username">Username</label><br />
+            <input type="text" id="username" name="username" required /><br />
+          </div>
+          <div>
+            <label for="password">Password</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            /><br />
+          </div>
+          <div class="form-buttons">
+            <input type="submit" value="Login" />
+            <button type="button" onclick="window.location.href='/signup'">
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- This is the login.html template for the Naga Careers application -->

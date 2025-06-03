@@ -1,0 +1,16 @@
+<style>
+  #banner {
+    height: 360px;
+    width: 100%;
+    object-fit: cover; /* fits the image to webpage neatly 1005 width and height auto */
+    margin-bottom: 16px;
+  }
+</style>
+<!-- this is absolute path to the image in the static folder -->
+<!-- <img class="img-fluid" src="/static/Banner.jpg" id="banner" /> -->
+<!-- this best use and flask will generate correct path everytime -->
+<img
+  src="{{ url_for('static', filename='Banner.jpg') }}"
+  alt="Banner Image"
+  id="banner"
+/>

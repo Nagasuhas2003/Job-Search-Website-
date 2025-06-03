@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{job.title}} - NagaCareers</title>
+    {%include 'bootstrap.html'%}
+    
+</head>
+<body>
+    {%include 'nav.html'%}
+   
+   
+    <div class="container">
+        <style>
+            #banner {
+              height: 360px;
+              width: 100%;
+              object-fit: cover; /* fits the image to webpage neatly 1005 width and height auto */
+              margin-bottom: 16px;
+            }
+          </style>
+          <!-- style can be wriiten in body or head -->
+          <img class="img-fluid" src="\static\Banner.jpg" id="banner" />
+        <h1 class="text-center mt-2 mb-4">Welcome to Naga Careers</h1>
+        <h3>{{job.title}}</h3>
+        <h4>Location</h4>
+        <p>{{job.location}}</p>
+        
+        <h4>Responsibities</h4>
+        <ul>
+            <!-- To print the information line by line so use ul-unordered list and li -line -->
+            {% for line in job.responsibilities.split("\n") %}
+            <li>{{line}}</li>
+            {%endfor%}
+        </ul>
+        
+        <h4>Requirements</h4>
+        <ul>
+            <!-- To print the information line by line so use ul-unordered list and li -line -->
+            {% for line in job.requirements.split("\n") %}
+            <li>{{line}}</li>
+            {%endfor%}
+        </ul>
+
+        <h4>Salaray</h4>
+        <p>{{job.salary}}</p>
+
+   {%include 'application_form.html' %}
+   {%include 'footer.html' %}
+</body>
+
+</html>
